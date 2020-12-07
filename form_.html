@@ -1,0 +1,53 @@
+<html>
+<head><script> 
+    function validation() { 
+        var name = document.forms["input_form"]["Name"]; 
+		var phone = document.forms["input_form"]["Phone"]; 
+        var email = document.forms["input_form"]["Email"]; 
+       
+  
+        if (name.value == "") { 
+            window.alert("Please enter your name."); 
+            name.focus(); 
+            return false; 
+        } 
+  
+        if (phone.value == "") { 
+            window.alert( 
+              "Please enter your mobile number."); 
+            phone.focus(); 
+            return false; 
+        } 
+  
+        if (email.value == "") { 
+            window.alert( 
+              "Please enter a valid e-mail address."); 
+            email.focus(); 
+            return false; 
+        } 
+		
+        return true; 
+    } 
+</script> </head>
+<body>
+<br>
+<form name="input_form" onsubmit="return validation();">
+<h1 style="text-align: center;">INPUT FORM</h1>
+<p>Name:   <input type="text" name="Name" size="50"></p>
+<br><br>
+<p>Mobile: <input type="text" name="Phone" size="50"></p>
+<br><br>
+<p>Email:  <input type="text" name="Email" size="50"></p>
+<br><br><br>
+
+<input type=submit name="submit" value="Submit">
+<table>
+<tr>
+<th>Name</th>
+<th>Phone</th>
+<th>Email</th>
+</tr>
+</table>
+</form>
+</body>
+</html>
